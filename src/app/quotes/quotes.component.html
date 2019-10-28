@@ -4,13 +4,13 @@
       <div class="row">
         <div class="col-md-6" *ngFor='let quote of quotes; let i = index'>
           <div class="card">
-            <div class="card-header alert alert-primary">
+            <div class="card-header alert alert-success">
               Quote {{quote.id}}
             </div>
             <div class="card-body" highlight>
               <p class="card-text"> <span class="marks">" </span>{{quote.name}} <span class="marks">"</span></p>
-              <p *ngIf='!quote.showDescription' id="info" class="btn btn-secondary" (click)='toggleDescription(i)'>Info</p>
-              <p *ngIf='quote.showDescription' id="minimize" class="btn btn-primary" (click)='toggleDescription(i)'>Minimize</p>
+              <p *ngIf='!quote.showDescription' id="info" class="btn btn-success" (click)='toggleDescription(i)'>Info</p>
+              <p *ngIf='quote.showDescription' id="minimize" class="btn btn-success" (click)='toggleDescription(i)'>Minimize</p>
               <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (wantToDelete)='removeQuote($event, i)'></app-quote-detail>
             </div>
           </div>
@@ -19,8 +19,8 @@
     </div>
     <div class="col-md-5">
       <div class="card">
-        <div class="card-header alert alert-primary">
-          Add Quote
+        <div class="card-header alert alert-primary" style="text-align: center;" >
+          <em> Add Quote</em>
         </div>
         <div class="card-body">
           <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
