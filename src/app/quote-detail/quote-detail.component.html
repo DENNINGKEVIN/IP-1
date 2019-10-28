@@ -1,1 +1,4 @@
-<p>quote-detail works!</p>
+<p>Author: <strong>{{quote.author}}</strong></p>
+<p>Added <strong>{{quote.creationDate|timeCount}}</strong> ago</p>
+<p class="btn btn-warning" id="upvote" (click)='addUpVote()'>like {{quote.upVote}}</p> <p id='downvote' (click)='addDownVote()' class='btn btn-primary'>dislike {{quote.downVote}}</p>
+<button class="btn btn-warning" (click)='quoteDelete(true)'>Delete Quote</button>
