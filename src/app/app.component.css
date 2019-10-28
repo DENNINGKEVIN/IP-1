@@ -3,9 +3,10 @@
   height: 30vh;
   color: black;
   padding-top: 32px;
+  font-family: 'Franklin Gothic Medium';
   
   
 }
 body{
-  background-color: cadetblue;
+  background-color: cadetblue
 }
